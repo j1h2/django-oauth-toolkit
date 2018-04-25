@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name="accesstoken",
-            name="source_refresh_token",
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=oauth2_settings.REFRESH_TOKEN_MODEL, related_name="refreshed_access_token"),
+            name="source_refresh_token_id",
+            field=models.BigIntegerField(blank=True, null=True),
             preserve_default=False,
         ),
         migrations.AddField(
